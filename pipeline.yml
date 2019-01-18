@@ -1,8 +1,16 @@
 ---
 resources:
- - name: pipeline-demo
-   type: git
-   check_every: 10s
-   source:
-     uri: https://github.com/shennyc1002/pipeline-demo.git
-     branch: master
+- name: pipeline-demo
+  type: git
+  source:
+    uri: https://github.com/shennyc1002/pipeline-demo.git
+    branch: master
+
+jobs:
+- name: build
+  public: true
+  plan:
+   - get: pipeline-demo
+     trigger: true
+   - task: Build-Project
+     file: pipeline-demo/ci/build.yml
