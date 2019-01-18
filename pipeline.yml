@@ -1,0 +1,8 @@
+---
+resources:
+ - name: pipeline-demo
+   type: git
+   check_every: 10s
+   source:
+     uri: https://github.com/shennyc1002/pipeline-demo.git
+     branch: master
