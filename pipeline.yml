@@ -29,7 +29,6 @@ jobs:
   plan:
    - get: pipeline-demo
      trigger: true
-     passed: [build]
    - put: deploy-demo
         params:
           manifest: pipeline-demo/manifest.yml
