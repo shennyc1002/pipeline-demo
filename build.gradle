@@ -8,10 +8,6 @@ buildscript {
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
-	jar {
-		baseName = pipeline-demo.jar
-
-	}
 }
 
 
@@ -30,4 +26,9 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+jar {
+	baseName = 'pipeline-demo'
+
 }
