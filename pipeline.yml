@@ -8,7 +8,7 @@ resources:
 - name: deploy-demo
   type: cf
   source:
-    api: {{api-url}}
+    api: ((api-url))
     skip_cert_check: false
     username: ((user-name))
     password: ((user-password))
