@@ -26,4 +26,4 @@ jobs:
    - put: deploy-demo
      params:
        manifest: pipeline-demo/manifest.yml
-       path: pipeline-demo/
+       path: build-output/
