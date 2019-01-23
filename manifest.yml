@@ -3,6 +3,6 @@ applications:
   - name: pipeline-demo
     memory: 1G
     timeout: 180
-    path: build-output/pipeline-demo-0.0.1-SNAPSHOT.jar
+    path: ../build-output/pipeline-demo-0.0.1-SNAPSHOT.jar
     health-check-type: process
     no-route: true
