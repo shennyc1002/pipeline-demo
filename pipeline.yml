@@ -25,12 +25,10 @@ jobs:
    - task: Build-Project
      file: pipeline-demo/ci/build.yml
 
-- name: deploy-demo
+- name: deploy-demo-app
   plan:
    - get: pipeline-demo
      trigger: true
-     passed: [build]
-   - get: build-ouput
      passed: [build]
    - put: deploy-demo
         params:
