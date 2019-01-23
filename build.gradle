@@ -30,5 +30,6 @@ dependencies {
 
 jar {
 	baseName = 'pipeline-demo'
+	enabled=true
 
 }
