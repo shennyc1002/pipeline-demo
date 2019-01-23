@@ -9,12 +9,11 @@ resources:
   type: cf
   source:
     api: ((api-url))
-
+    skip_cert_check: false
     username: ((user-name))
     password: ((user-password))
     organizantion: ((org))
     space: ((space))
-    skip_cert_check: false
 
 jobs:
 - name: build
@@ -24,12 +23,7 @@ jobs:
      trigger: true
    - task: Build-Project
      file: pipeline-demo/ci/build.yml
-
-- name: deploy-demo-app
-  plan:
-   - get: pipeline-demo
-     trigger: true
    - put: deploy-demo
-        params:
-          manifest: pipeline-demo/manifest.yml
-          path: build-output/*.jar
+     params:
+       manifest: pipeline-demo/manifest.yml
+       path: build-output/*.jar
