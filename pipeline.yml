@@ -25,4 +25,4 @@ jobs:
      file: pipeline-demo/ci/build.yml
    - put: deploy-demo
      params:
-       manifest: /manifest.yml
+       manifest: pipeline-demo/manifest.yml
