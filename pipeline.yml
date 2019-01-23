@@ -5,6 +5,15 @@ resources:
   source:
     uri: https://github.com/shennyc1002/pipeline-demo.git
     branch: master
+- name: deploy-demo
+  type: cf
+  source:
+    api: ((api-url))
+    skip_cert_check: false
+    username: ((user-name))
+    password: ((user-password))
+    organizantion: ((org))
+    space: ((space))
 
 jobs:
 - name: build
@@ -14,3 +23,6 @@ jobs:
      trigger: true
    - task: Build-Project
      file: pipeline-demo/ci/build.yml
+   - put: deploy-demo
+     params:
+       manifest: build-output/manifest.yml

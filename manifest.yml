@@ -1,0 +1,12 @@
+---
+applications:
+  - name: xi-order-processing-batch
+    memory: 1G
+    timeout: 180
+    path: build/libs/xi-order-processing-batch-0.0.1-SNAPSHOT.jar
+    health-check-type: process
+    no-route: true
+    services:
+      - po1-mysql
+env:
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
