@@ -7,4 +7,4 @@ applications:
     health-check-type: process
     no-route: true
     buildpacks:
-      - https://github.com/cloudfoundry/java-buildpack.git
+      - java_buildpack
