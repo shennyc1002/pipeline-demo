@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class CAPost {
 
-    public static void main(String[] args)
+   /* public static void main(String[] args)
     {
         //ClientHttpRequestFactory requestFactory = getClientHttpRequestFactory();
 
@@ -28,5 +28,5 @@ public class CAPost {
         }
 
 
-    }
+    }*/
 }
