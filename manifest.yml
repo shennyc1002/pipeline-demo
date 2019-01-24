@@ -6,3 +6,5 @@ applications:
     path: ../build-output/pipeline-demo-0.0.1-SNAPSHOT.jar
     health-check-type: process
     no-route: true
+    buildpacks:
+      - https://github.com/cloudfoundry/java-buildpack.git

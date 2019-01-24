@@ -11,7 +11,7 @@ resources:
     api: ((api-url))
     username: ((user-name))
     password: ((user-password))
-    organizantion: ((org))
+    organization: ((org))
     space: ((space))
     skip_cert_check: true
 
